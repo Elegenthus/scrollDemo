@@ -8,8 +8,8 @@ module.exports = {
         'main.js': ['./src/main.js']
     },
     output: {
-        path: path.join(__dirname, '/static'),
-        publicPath: '/static/',
+        path: path.join(__dirname, '/dist'),
+        publicPath: '/dist/',
         filename: 'main.js'
     },
     module: {
