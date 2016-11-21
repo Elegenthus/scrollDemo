@@ -1,0 +1,214 @@
+{
+	"routes": [{
+		"name" : "home",
+		"endpoint": "/",
+		"template": "index",
+		"async": false
+	},
+	{
+		"name" : "api.feed",
+		"endpoint": "/api/v1.0/feed",
+		"queryKey": {
+			"category":"kind",
+			"pagination":"page",
+			"count":"count",
+			"sort":"sort"
+		},		
+		"async": true
+	},
+	{
+		"name" : "second",
+		"endpoint" : "/second",
+		"template" : "second",
+		"async" :false
+	},
+	{
+		"name" : "pictures",
+		"endpoint" : "/pictures",
+		"template" : "pictures",
+		"async" :false
+	},
+	{
+		"name":"profile",
+		"endpoint":"/profile",
+		"template":"profile",
+		"async":false
+	},
+	{
+		"name": "everydaypic",
+		"endpoint": "/api/v1.0/everyDayPic",
+		"async": true
+	},
+	{
+		"name": "banner",
+		"endpoint": "/api/v1.0/banner/",
+		"async": true
+	},
+	{
+		"name":"article",
+		"endpoint":"/api/v1.0/article/",
+		"async":true
+	},
+	{
+		"name":"comments",
+		"endpoint":"/api/v1.0/comments",
+		"async":true
+	},
+	{
+		"name":"returnComment",
+		"method":"post",
+		"endpoint":"/api/v1.0/comments",
+		"async":true
+	},
+	{
+		"name":"light",
+		"endpoint":"/light",
+		"async":false
+	}],
+	"data":{
+		"returnComment":{	
+			"status":"成功啦"
+		},
+		"api.feed" : {
+			"0":{
+				"kind":0, 
+     			"id":1,
+     			"img_url":"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg", 
+     			"title":"我是主页哈哈哈哈",
+     			"author":"作者1",
+     			"view_count":"2",
+     			"tag":[1,2],
+     			"description":"这篇文章很好看"
+			},
+			"1":{
+				"kind":1, 
+     			"id":1,
+     			"img_url":"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg", 
+     			"title":"我是新闻哈哈哈",
+     			"author":"作者1",
+     			"view_count":"2",
+     			"tag":[1,2],
+     			"description":"这篇文章很好看"
+			},
+			"2":{
+				"kind":2, 
+     			"id":1,
+     			"img_url":"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg", 
+     			"title":"我是图片哈哈哈",
+     			"author":"作者1",
+     			"view_count":"2",
+     			"tag":[1,2],
+     			"description":"这篇文章很好看"
+			},
+			"3":{
+				"kind":3, 
+     			"id":1,
+     			"img_url":"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg", 
+     			"title":"我是水墨哈哈哈",
+     			"author":"作者1",
+     			"view_count":"2",
+     			"tag":[1,2],
+     			"description":"这篇文章很好看"
+			},
+			"4":{
+				"kind":4, 
+     			"id":1,
+     			"img_url":"http://img05.tooopen.com/images/20160121/tooopen_sy_155168162826.jpg", 
+     			"title":"我是互动哈哈哈",
+     			"author":"作者1",
+     			"view_count":"2",
+     			"tag":[1,2],
+     			"description":"这篇文章很好看"
+			}
+		},
+		
+		"everydaypic" : {
+			"img_url" : "http://pics.sc.chinaz.com/files/pic/pic9/201508/apic14052.jpg",
+			"temperature":"37.5",
+   			"date":"2016.11.8",
+   			"place":"武汉"
+		},
+		"profile":{
+    		"img_url":"http://pics.sc.chinaz.com/files/pic/pic9/201508/apic14052.jpg",
+    		"name":"hahaha",
+    		"weibo":"huhuhu",        
+    		"introduction":"这是一个个人简介",  
+    		"works":"这是个人作品",      
+    		"collection":"这是个人收藏",
+    		"suggestion":"这里有一些个人简介"
+		},
+		"pics":{
+			"title": "这里会返回一串html页面展示为图片二级页面"
+		},
+		"news":{
+   			"title":"这是一个新闻二级页面",
+   			"author":"新闻作者1",
+   			"time":"2016.11.1",
+   			"body":"文章主题，返回一个html字符串"  
+		},
+		"article":{
+			"id":0,
+			"kind":0,
+			"title":"水墨文章题目",
+   			"author":"水墨文章作者",
+   			"time":"2016.11.2",
+   			"body":"水墨文章主题，返回为一个html字符串",   
+  			"music":{
+         		"title":"歌曲名",
+        		"img_url": "http://pics.sc.chinaz.com/files/pic/pic9/201508/apic14052.jpg",
+         		"music_url":"返回一个音乐的URL"   
+    		}
+		},
+		"comments":[
+  			{
+     		"id":2, 
+     		"img_url":"http://www.360shuoshuo.com/d/file/tpss/3221e4feb0252e6790b92a563857eeed.jpg",  
+    		"message":"这篇文章真棒",  
+     		"comments":[], 
+     		"like_count":45 
+  			},
+  			{
+     		"id":3, 
+     		"img_url":"http://www.360shuoshuo.com/d/file/tpss/3221e4feb0252e6790b92a563857eeed.jpg",  
+    		"message":"这篇文章更棒",  
+     		"comments":[], 
+     		"like_count":45 
+  			},
+  			{
+     		"id":3, 
+     		"img_url":"http://www.360shuoshuo.com/d/file/tpss/3221e4feb0252e6790b92a563857eeed.jpg",  
+    		"message":"这篇文章最棒",  
+     		"comments":[], 
+     		"like_count":45 
+  			}
+		],
+		"banner":[
+			{
+				"pic_url":"http://guisheng.ccnu.edu.cn/uploads/allimg/161106/275-1611061UU9.jpg"
+			},{
+				"pic_url":"http://guisheng.ccnu.edu.cn/uploads/allimg/161106/275-1611061UU9-50.jpg"
+			},{
+				"pic_url":"http://guisheng.ccnu.edu.cn/uploads/allimg/161106/275-1611061UU7.jpg"
+			},{
+				"pic_url":"http://guisheng.ccnu.edu.cn/uploads/allimg/161106/275-1611061UU8.jpg"
+			},{
+				"pic_url":"http://guisheng.ccnu.edu.cn/uploads/allimg/161106/275-1611061UZ0.jpg"
+			},{
+				"pic_url":"http://guisheng.ccnu.edu.cn/uploads/allimg/161106/275-1611061UZ1.jpg"
+			},{
+				"pic_url":"http://guisheng.ccnu.edu.cn/uploads/allimg/161106/275-1611061UZ2.jpg"
+			}
+		],
+		"interaction":{
+   			"title":"互动标题",
+   			"author":"互动作者",
+   			"time":"2016-11-2",
+   			"body":"互动文章主体返回一个html字符串"   
+		},
+		"like":{
+   			"article_id":"32",
+   			"type":"0",
+   			"like":"3" 
+		}
+	}
+}
