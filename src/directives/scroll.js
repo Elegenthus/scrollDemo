@@ -7,12 +7,13 @@ let scrollCallback = function(callback) {
     }
 }
 
+let callBackWarpped // 新变量 保存引用
 export default {
     bind: function(el, binding, vnode) {
-        window.addEventListener("scroll", scrollCallback.bind({}, binding.value))
+        callBackWarpped =  scrollCallback.bind({}, binding.value)
+        window.addEventListener("scroll", callBackWarpped)
     },
-
     unbind: function() {
-        window.removeEventListener("scroll", scrollCallback)
+        window.removeEventListener("scroll", callBackWarpped)
     }
 }
